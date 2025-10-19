@@ -47,6 +47,8 @@
 
   // Signature block
   signature-block: {{ signature_block | Lines(default=["signature_block"]) }},
+
+  memo-for-cols: 1,
 )
 
 #{{ body | Content }}
