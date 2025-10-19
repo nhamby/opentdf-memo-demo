@@ -9,6 +9,8 @@ functionality without needing a full MCP client.
 import sys
 import json
 import argparse
+import os
+import traceback
 from pathlib import Path
 
 # Import server components
@@ -65,7 +67,6 @@ def cmd_render(args):
         output_path = render_memo_to_pdf(args.input)
         print(f"✓ PDF generated: {output_path}")
         
-        import os
         file_size = os.path.getsize(output_path)
         print(f"  File size: {file_size:,} bytes")
         
@@ -78,7 +79,6 @@ def cmd_render(args):
         return 1
     except Exception as e:
         print(f"Error: {e}", file=sys.stderr)
-        import traceback
         traceback.print_exc()
         return 1
 

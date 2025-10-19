@@ -22,7 +22,7 @@ This memorandum demonstrates the successful implementation of the Model Context 
 
 **Background.** The traditional process of creating official USAF memorandums requires:
 - Manual formatting in word processors
-- Adherence to AFI 33-332 formatting standards
+- Adherence to AFI 33-360 formatting standards
 - Multiple review cycles for format compliance
 
 **Implementation.** The MCP server provides:
