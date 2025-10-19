@@ -22,7 +22,28 @@ pip install -r requirements.txt
 
 ## Usage
 
-### Running the Server
+### Command Line Interface (CLI)
+
+For quick testing and standalone usage, use the CLI wrapper:
+
+```bash
+# Show field schema
+python cli.py schema
+
+# Get an example memo
+python cli.py example
+
+# Save example to a file
+python cli.py example -o my_memo.md
+
+# Render a memo to PDF
+python cli.py render my_memo.md
+
+# Show Quill description
+python cli.py description
+```
+
+### Running the MCP Server
 
 The server uses stdio transport for communication with MCP clients:
 
