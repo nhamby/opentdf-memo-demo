@@ -207,4 +207,4 @@ marimo/_lsp/
 __marimo__/
 
 # Memo MCP output
-memo-mcp/output/
+#memo-mcp/output/
