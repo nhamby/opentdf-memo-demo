@@ -126,8 +126,7 @@ signature_block:
 
 ## Project Files
 
-- `CLASSIFIED_REPORT.ntdf` - Example encrypted report
-- `URGENT_MEMO_TO_CONGRESS.md` - Example memo markdown
+- `Scenario/CLASSIFIED_REPORT.ntdf` - Example encrypted report
 - `memo-mcp/output/` - Directory for rendered PDF memos
 - `setup-mcp.sh` - MCP server setup script
 
