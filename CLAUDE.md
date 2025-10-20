@@ -113,6 +113,7 @@ signature_block:
 
 ### USAF Memos
 - ALWAYS read `memo://usage` before creating memos
+- Ask for user details (name, rank)
 - Let auto-numbering handle paragraph structure
 - Keep formatting minimal - focus on content clarity
 - Use bold for emphasis on urgent items
