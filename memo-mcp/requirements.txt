@@ -1,2 +1,2 @@
-quillmark>=0.4.0
+quillmark>=0.5.1
 mcp>=1.18.0
