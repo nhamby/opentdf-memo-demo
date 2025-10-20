@@ -56,12 +56,12 @@ def get_memo_schema() -> str:
 @mcp.resource("memo://usage")
 def get_usage() -> str:
     """
-    Get tips for writing a markdown document for rendering to USAF memo.
+    Get instructions for writing a markdown document for rendering to USAF memo.
     """
     return (
         "This template automatically numbers your paragraphs and nested paragraphs." 
         "Do not use headers or manual numbering; rely on the default paragraph numbering system."
-        "Keep it simple. Focus on text and content."
+        "Keep it simple. Focus on text and content. No classification markings."
     )
 
 
