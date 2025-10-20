@@ -1,8 +1,0 @@
-{
-  "mcpServers": {
-    "usaf-memo": {
-      "command": "python",
-      "args": ["server.py"]
-    }
-  }
-}
