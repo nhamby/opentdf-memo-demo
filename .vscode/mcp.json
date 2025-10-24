@@ -1,0 +1,17 @@
+{
+	"servers": {
+		"memo-mcp": {
+			"type": "stdio",
+			"command": "python",
+			"args": [
+				"memo-mcp/server.py"
+			]
+		},
+		"opentdf-mcp": {
+			"type": "stdio",
+			"command": "opentdf-mcp/opentdf-mcp-server",
+			"args": []
+		}
+	},
+	"inputs": []
+}
