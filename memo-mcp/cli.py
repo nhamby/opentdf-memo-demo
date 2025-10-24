@@ -55,7 +55,6 @@ def cmd_description(args):
         print(f"Name: {desc['name']}")
         print(f"Backend: {desc['backend']}")
         print(f"Description: {desc['description']}")
-        print(f"Supported Formats: {', '.join(desc['supported_formats'])}")
 
 
 def cmd_render(args):

@@ -60,7 +60,10 @@ def get_usage() -> str:
     """
     instruction =  """This template automatically numbers your paragraphs and nested paragraphs. Writing tips:
 - Do not use standard `#` headings; rely on the default paragraph numbering system for organization.
-- You may include headings in-line at the beginning of a paragraph in bold; however, never put a heading on its own line.
+- You may include headings in-line at the beginning of a paragraph in bold
+    - Never put a heading on its own line
+    - You do not need a heading for every paragraph.
+- When including classified information, ensure you define `classification` for the banner and use portion markings.
 - KISS. Focus on text and content.
 """
 
@@ -90,7 +93,6 @@ def get_memo_description() -> str:
         "name": quill.name,
         "backend": quill.backend,
         "description": quill.metadata.get("description", ""),
-        "supported_formats": [str(fmt) for fmt in quill.supported_formats()],
     }
     return json.dumps(info, indent=2)
 
