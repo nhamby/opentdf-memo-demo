@@ -1,3 +1,7 @@
+---
+applyTo: '**'
+---
+
 # OpenTDF Memo Demo
 
 ## Project Overview
