@@ -42,7 +42,7 @@ qm = quillmark.Quillmark()
 quill = quillmark.Quill.from_path(str(QUILL_PATH))
 qm.register_quill(quill)
 
-
+@mcp.tool()
 @mcp.resource("memo://schema")
 def get_memo_schema() -> str:
     """
@@ -53,24 +53,25 @@ def get_memo_schema() -> str:
     """
     return json.dumps(quill.schema, indent=2)
 
+@mcp.tool()
 @mcp.resource("memo://usage")
 def get_usage() -> str:
     """
     Get instructions for writing a markdown document for rendering to USAF memo.
     """
-    instruction =  """This template automatically numbers your paragraphs and nested paragraphs. Writing tips:
-- Do not use standard `#` headings; rely on the default paragraph numbering system for organization.
-- You may include headings in-line at the beginning of a paragraph in bold
-    - Don't put a heading on its own line unless you are enumerating a list.
+    instruction =  """
+- This template automatically numbers your paragraphs. Use bullet lists to hierarchically nest paragraphs deeper.
+- Do not bullet list top-level paragraphs.
+- Do not use standard `#` headings or numbering
+- You may include bold paragraph titles in-line at the beginning of a paragraph in bold
+    - Don't put a paragraph title on its own line unless you are enumerating a bullet list directly after.
     - You do not need a heading for every paragraph.
 - When including classified information, ensure you define `classification` for the banner and use portion markings.
-- KISS. Focus on text and content.
-- See `memo://schema` and `memo://example` for additional information.
 """
 
     return instruction
 
-
+@mcp.tool()
 @mcp.resource("memo://example")
 def get_memo_example() -> str:
     """
@@ -81,7 +82,7 @@ def get_memo_example() -> str:
     """
     return quill.example or "No example available"
 
-
+@mcp.tool()
 @mcp.resource("memo://description")
 def get_memo_description() -> str:
     """
