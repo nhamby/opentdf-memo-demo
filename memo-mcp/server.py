@@ -22,8 +22,8 @@ This server helps you create USAF memos using the usaf_memo Quill template.
 
 Available resources:
 - memo://usage - Get usage and writing tips for USAF memos (REQUIRED)
-- memo://schema - Get the field schema for USAF memos
-- memo://example - Get an example USAF memo markdown
+- memo://schema - Get the field schema for USAF memos (REQUIRED)
+- memo://example - Get an example USAF memo markdown (REQUIRED)
 
 Available tools:
 - render_memo_to_pdf - Render a USAF memo markdown file to PDF
@@ -49,7 +49,7 @@ def get_memo_schema() -> str:
     Get the field schema for USAF memos.
     
     Returns a JSON object describing all available fields, their types,
-    descriptions, and whether they are required.
+    descriptions, and defaults.
     """
     return json.dumps(quill.schema, indent=2)
 
@@ -58,11 +58,13 @@ def get_usage() -> str:
     """
     Get instructions for writing a markdown document for rendering to USAF memo.
     """
-    return (
-        "This template automatically numbers your paragraphs and nested paragraphs." 
-        "Do not use headers or manual numbering; rely on the default paragraph numbering system."
-        "Keep it simple. Focus on text and content. No classification markings."
-    )
+    instruction =  """This template automatically numbers your paragraphs and nested paragraphs. Writing tips:
+- Do not use standard `#` headings; rely on the default paragraph numbering system for organization.
+- You may include headings in-line at the beginning of a paragraph in bold; however, never put a heading on its own line.
+- KISS. Focus on text and content.
+"""
+
+    return instruction
 
 
 @mcp.resource("memo://example")
