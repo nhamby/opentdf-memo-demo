@@ -38,17 +38,16 @@ mcp__opentdf-mcp__encrypt(
 Helps create USAF memos using the usaf_memo Quill template.
 
 **Resources:**
-- `memo://usage` - Usage and writing tips (REQUIRED before writing memos)
+- `memo://usage` - Usage and writing tips
 - `memo://schema` - Field schema for USAF memos
-- `memo://example` - Example USAF memo markdown
+- `memo://example` - Example USAF memo markdown 
 
 **Tools:**
 - `mcp__memo-mcp__render_memo_to_pdf` - Render markdown memo to PDF
 
 **IMPORTANT Memo Guidelines:**
-- Paragraphs auto-number - DO NOT use headers or manual numbering
+- Paragraphs auto-number - DO NOT use headeings or manual numbering
 - Keep it simple - focus on text and content
-- No classification markings in the template
 - Use bullets for nested paragraphs
 - Markdown support: bold, italics, links, code, strikethrough
 
@@ -70,45 +69,12 @@ User: "decrypt CLASSIFIED_REPORT and write an urgent memo to Congress"
 → Find .ntdf file
 → Decrypt with opentdf-mcp
 → Analyze decrypted content
+- Read memo usage, schema, and example
 → Create USAF memo markdown
 → Render to PDF
 ```
 
-### USAF Memo Structure
-
-**Required Frontmatter:**
-```yaml
----
-QUILL: usaf_memo
-letterhead_title: DEPARTMENT OF THE AIR FORCE
-letterhead_caption: YOUR SQUADRON HERE
-memo_for:
-  - Recipient Organization/Symbol
-memo_from:
-  - Sender ORG/SYMBOL
-  - Organization Name
-  - Street Address
-  - City State ZIP
-subject: Your subject line here
-signature_block:
-  - FIRST M. LAST, Rank, USAF
----
-```
-
-**Optional Fields:**
-- `date:` (YYYY-MM-DD format, defaults to today)
-- `cc:` (array)
-- `attachments:` (array)
-- `distribution:` (array)
-- `references:` (array)
-- `tag_line:` (e.g., "Aim High")
-
 ## Best Practices
-
-### Planning
-- Use TodoWrite for multi-step workflows (3+ steps)
-- Mark tasks in_progress before starting work
-- Complete tasks immediately after finishing (don't batch)
 
 ### OpenTDF
 - Prefer nanoTDF format (`format: "nano"`) for better compatibility
@@ -127,40 +93,3 @@ signature_block:
 - Check if files exist with Glob before attempting operations
 - Use absolute paths for all file operations
 - Read files before editing/writing to ensure correct handling
-
-## Project Files
-
-- `Scenario/CLASSIFIED_REPORT.ntdf` - Example encrypted report
-- `memo-mcp/output/` - Directory for rendered PDF memos
-- `setup-mcp.sh` - MCP server setup script
-
-## Tips & Gotchas
-
-- **Memo auto-numbering**: Don't fight it - use simple paragraphs and bullets
-- **Decryption**: Returns JSON with `decryptedData` and `success` fields
-- **PDF rendering**: Returns path to generated PDF in `memo-mcp/output/`
-- **Classification**: The template itself doesn't handle classification markings
-- **Date format**: Use YYYY-MM-DD in frontmatter (e.g., `2025-10-20`)
-
-## Quick Reference
-
-**Decrypt workflow:**
-```
-Glob → Decrypt → Analyze content
-```
-
-**Memo workflow:**
-```
-Read usage → Create markdown → Render PDF
-```
-
-**Combined workflow:**
-```
-Decrypt report → Extract insights → Create memo → Render PDF
-```
-
-## Additional Resources
-
-- OpenTDF Documentation: Check opentdf-mcp server docs
-- USAF Memo Examples: `memo://example` resource
-- Quill Templates: usaf_memo template system
