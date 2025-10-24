@@ -56,7 +56,7 @@ Helps create USAF memos using the usaf_memo Quill template.
 1. Find encrypted file: e.g. `Glob` pattern `**/*.ntdf`
 2. Decrypt: `mcp__opentdf-mcp__decrypt(input: "/path/to/file.ntdf")`
 3. Review content and extract key points
-4. Get memo guidelines: `ReadMcpResourceTool(server: "memo-mcp", uri: "memo://usage")`
+4. Get memo guidelines: `ReadMcpResourceTool(server: "memo-mcp", uri: "memo://<usage|schema|example>")`
 5. Create memo markdown with QUILL frontmatter
 6. Render to PDF: `mcp__memo-mcp__render_memo_to_pdf(markdown_file_path: "...")`
 
