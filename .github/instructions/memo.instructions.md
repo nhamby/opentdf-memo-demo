@@ -46,10 +46,10 @@ Helps create USAF memos using the usaf_memo Quill template.
 - `mcp__memo-mcp__render_memo_to_pdf` - Render markdown memo to PDF
 
 **IMPORTANT Memo Guidelines:**
-- Paragraphs auto-number - DO NOT use headeings or manual numbering
+- Paragraphs auto-number - DO NOT use headings or manual numbering
 - Keep it simple - focus on text and content
-- Use bullets for nested paragraphs
-- Markdown support: bold, italics, links, code, strikethrough
+- Do not number top-level paragraphs
+- Use bullets or numbered list for nested paragraphs (equivalent functionality)
 
 ## Common Workflows
 
@@ -81,15 +81,8 @@ User: "decrypt CLASSIFIED_REPORT and write an urgent memo to Congress"
 - Decrypt tool auto-detects TDF vs nanoTDF format
 - Check available attributes with `list_attributes` before encrypting
 
-### USAF Memos
-- ALWAYS read `memo://usage` before creating memos
-- Ask for user details (name, rank)
-- Let auto-numbering handle paragraph structure
-- Keep formatting minimal - focus on content clarity
-- Use bold for emphasis on urgent items
-- PDF output goes to `memo-mcp/output/` directory
-
 ### File Operations
 - Check if files exist with Glob before attempting operations
 - Use absolute paths for all file operations
 - Read files before editing/writing to ensure correct handling
+- Create markdown files in `drafts/` before rendering to pdf
