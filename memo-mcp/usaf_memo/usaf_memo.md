@@ -1,19 +1,17 @@
 ---
 QUILL: usaf_memo
-letterhead_title: DEPARTMENT OF THE AIR FORCE
-letterhead_caption: YOUR SQUADRON HERE
 memo_for:
-  - ORG/SYM
-  # - 2nd ORG/SYM
+  - ORG/SYMBOL
 memo_from:
   - ORG/SYMBOL
   - ORGANIZATION
   - Street Address
   - City St 12345-6789
-subject: Comply without pain -- markdown to official memo
+subject: Comply without pain -- markdown to official memola
 signature_block:
-  - FIRST M. LAST, Rank, USAF
+  - FIRST M. LAST, Rank, USSF
 tag_line: Aim High
+classification: UNCLASSIFIED
 ---
 
 Write your paragraphs here. Separate them with two new lines.
@@ -24,4 +22,4 @@ Write your paragraphs here. Separate them with two new lines.
 You can also **bold**, _italicize_, `code`, ~strikethrough~,
 and [link](https://example.com/) your text.
 
-Less formatting. More lethality.
+Less formatting. More lethality. More taro.

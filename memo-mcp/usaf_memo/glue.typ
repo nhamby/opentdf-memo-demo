@@ -1,6 +1,4 @@
-#import "@preview/tonguetoquill-usaf-memo:0.1.1": official-memorandum, indorsement
-
-#show raw: set text(font: "space mono")
+#import "@preview/tonguetoquill-usaf-memo:0.2.0": official-memorandum, indorsement
 
 // Generate the official memorandum with validated and processed input
 #show:official-memorandum.with(
@@ -45,10 +43,13 @@
   footer-tag-line: {{ tag_line | String }},
   {% endif %}
 
+    // Optional classification level
+  {% if classification is defined %}
+  classification-level: {{ classification | String }},
+  {% endif %}
+
   // Signature block
   signature-block: {{ signature_block | Lines(default=["signature_block"]) }},
-
-  memo-for-cols: 1,
 )
 
 #{{ body | Content }}
