@@ -92,8 +92,9 @@ Example memo structure:
 ---
 QUILL: usaf_memo
 memo_for:
-  - RECIPIENT ORG/SYMBOL
-  - ORGANIZATION NAME
+  - ORG1/SYMBOL
+  - ORG2/SYMBOL
+  - etc.
 memo_from:
   - SENDER ORG/SYMBOL
   - ORGANIZATION NAME

@@ -34,19 +34,18 @@ mcp__opentdf-mcp__encrypt(
 ### memo-mcp
 Helps create USAF memos using the usaf_memo Quill template.
 
-**Resources:**
-- `memo://usage` - Usage and writing tips
-- `memo://schema` - Field schema for USAF memos
-- `memo://example` - Example USAF memo markdown 
-
 **Tools:**
 - `mcp__memo-mcp__render_memo_to_pdf` - Render markdown memo to PDF
+- `mcp__memo-mcp__get_memo_schema` - Retrieve the schema for memo markdown frontmatter, ensuring proper structure and compliance.
+- `mcp__memo-mcp__get_usage` - Access usage guidelines for creating memos.
+- `mcp__memo-mcp__get_memo_example` - Fetch an example memo for reference.
 
 **IMPORTANT Memo Guidelines:**
 - Paragraphs auto-number - NEVER use headings or numbering
 - Keep it simple - focus on text and content
-- Do not number top-level paragraphs
-- Use bullets or for nested paragraphs (equivalent functionality)
+- Use bullets for nested paragraphs/lists
+- Do not use bullets for top-level paragraphs
+- Add classification banner and portion markings if applicable
 
 ## Common Workflows
 
