@@ -51,7 +51,7 @@ def get_memo_schema() -> str:
     Returns a JSON object describing all available fields, their types,
     descriptions, and whether they are required.
     """
-    return json.dumps(quill.field_schemas, indent=2)
+    return json.dumps(quill.schema, indent=2)
 
 @mcp.resource("memo://usage")
 def get_usage() -> str:

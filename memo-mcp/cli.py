@@ -30,10 +30,8 @@ def cmd_schema(args):
     else:
         print("USAF Memo Field Schema")
         print("=" * 60)
-        for field, info in schema.items():
-            required = "REQUIRED" if info.get("required") else "optional"
-            print(f"\n{field} ({required})")
-            print(f"  {info.get('description', '')}")
+        for field_name,field_schema in schema["properties"].items():
+            print(f"{field_name}: {field_schema}")
 
 
 def cmd_example(args):
