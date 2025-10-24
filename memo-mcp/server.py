@@ -61,10 +61,11 @@ def get_usage() -> str:
     instruction =  """This template automatically numbers your paragraphs and nested paragraphs. Writing tips:
 - Do not use standard `#` headings; rely on the default paragraph numbering system for organization.
 - You may include headings in-line at the beginning of a paragraph in bold
-    - Never put a heading on its own line
+    - Don't put a heading on its own line unless you are enumerating a list.
     - You do not need a heading for every paragraph.
 - When including classified information, ensure you define `classification` for the banner and use portion markings.
 - KISS. Focus on text and content.
+- See `memo://schema` and `memo://example` for additional information.
 """
 
     return instruction
