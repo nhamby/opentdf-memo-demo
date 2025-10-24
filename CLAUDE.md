@@ -46,7 +46,7 @@ Helps create USAF memos using the usaf_memo Quill template.
 - Use bullets for nested paragraphs/lists
 - Do not use bullets for top-level paragraphs
 - If you are deriving from a classified source:
-  - Add classification banner
+  - Add classification banner with FICTIONAL tag. e.g. SECRET//NOFORN//FICTIONAL
   - Add portion markings at the beginning of each paragraph
 
 ## Common Workflows
