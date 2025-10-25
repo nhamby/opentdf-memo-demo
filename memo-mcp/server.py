@@ -21,9 +21,8 @@ mcp = FastMCP(
 This server helps you create USAF memos using the usaf_memo Quill template.
 
 Available resources:
-- memo://usage - Get usage and writing tips for USAF memos (REQUIRED)
-- memo://schema - Get the field schema for USAF memos (REQUIRED)
-- memo://example - Get an example USAF memo markdown (REQUIRED)
+- memo://schema - Get the field schema for USAF memos
+- memo://example - Get an example with authoritative usage information for USAF memo markdown
 
 Available tools:
 - render_memo_to_pdf - Render a USAF memo markdown file to PDF
@@ -52,24 +51,6 @@ def get_memo_schema() -> str:
     descriptions, and defaults.
     """
     return json.dumps(quill.schema, indent=2)
-
-@mcp.tool()
-@mcp.resource("memo://usage")
-def get_usage() -> str:
-    """
-    Get instructions for writing a markdown document for rendering to USAF memo.
-    """
-    instruction =  """
-- This template automatically numbers your paragraphs. Use bullet lists to hierarchically nest paragraphs deeper.
-- Do not bullet list top-level paragraphs.
-- Do not use standard `#` headings or numbering
-- You may include bold paragraph titles in-line at the beginning of a paragraph in bold
-    - Don't put a paragraph title on its own line unless you are enumerating a bullet list directly after.
-    - You do not need a heading for every paragraph.
-- When including classified information, ensure you define `classification` for the banner and use portion markings.
-"""
-
-    return instruction
 
 @mcp.tool()
 @mcp.resource("memo://example")

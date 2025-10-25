@@ -29,9 +29,11 @@ tag_line: Raiders Roll
 classification: SECRET//FICTIONAL
 ---
 
-The `usaf_memo` Quill automatically numbers paragraphs. Top-level paragraphs like this one are automatically numbered 1., 2., etc.
+The `usaf_memo` Quill package takes care of many formatting details for AFH 33-337 official memorandums to let you focus on the content.
 
-- Use bullets for hierarchical paragraph nesting.
-  - Up to five levels are supported.
+**Numbering** Top-level paragraphs like this one are automatically numbered. NEVER manually number your paragraphs.
 
-**Section Titles** Do NOT use markdown headings. If you want to title sections, use bold text in-line with the paragraph. Never include a section title on its own line. Nest section children with bullets.
+- Use bullets for hierarchical paragraph nesting. These are automatically numbered as well.
+  - Up to five nested levels are supported
+
+**Headings** Do NOT use markdown headings. If you want to title paragraphs/sections, use bold text in-line with the paragraph.
