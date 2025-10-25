@@ -1,31 +1,34 @@
 ---
+#===Essential===
 QUILL: usaf_memo
-letterhead_title: TERRAN DOMINION
+letterhead_title: DEPARTMENT OF THE AIR FORCE
 letterhead_caption:
-  - Raynor's Raiders
+  - YOUR SQUADRON HERE
 date: 2504-10-05
 memo_for:
-  - DOMINION/HQ
-  - PROTOSS/FLEET
+  - 1st ORG/SYMBOL
+  #- 2nd ORG/SYMBOL
 memo_from:
-  - RAIDER/CC
-  - Raynor's Raiders
-  - Hyperion Battlecruiser
-  - Sector 7G
-subject: Zerg Swarm Threat Assessment
+  - ORG/SYMBOL
+  - Organization Name
+  - 123 Street Ave
+  - City ST 12345-6789
+subject: Subject of the Memorandum
+
+#===Optional===
 references:
-  - Dominion Directive 47, 15 Aug 2504, Swarm Protocols
+  - Document, YYYY MMM DD, Description/Title
 cc:
-  - Captain Matt Horner, RAIDER/NAV
+  - Rank Name, ORG/SYMBOL
 distribution:
-  - Raynor's Raiders
-  - Dominion Forces
-  - Protoss Expeditionary Fleet
+  - 1st ORG/SYMBOL
+  #- 2nd ORG/SYMBOL
 attachments:
-  - Zerg Intel Report, 05 Oct 2504
+  - Attachment_Name, YYYY MMM DD
 signature_block:
-  - JIM RAYNOR, Commander, Raynor's Raiders
-tag_line: Raiders Roll
+  - FIRST M. LAST, Rank, USAF
+  #- Optional Duty Title
+tag_line: Aim High
 classification: SECRET//FICTIONAL
 ---
 
@@ -36,4 +39,6 @@ The `usaf_memo` Quill package takes care of many formatting details for AFH 33-3
 - Use bullets for hierarchical paragraph nesting. These are automatically numbered as well.
   - Up to five nested levels are supported
 
-**Headings** Do NOT use markdown headings. If you want to title paragraphs/sections, use bold text in-line with the paragraph.
+**Headings** Do NOT use markdown headings. If you want to title paragraphs/sections, use bold text in-line with the paragraph or nest paragraphs underneath.
+
+Do not include a complimentary close (e.g. "Respectfully,") in official memorandums.
