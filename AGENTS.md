@@ -42,9 +42,6 @@ Helps create USAF memos using the usaf_memo Quill template.
 
 **IMPORTANT Memo Guidelines:**
 - Paragraphs auto-number - NEVER use headings or numbering
-- Keep it simple - focus on text and content
-- Use bullets for nested paragraphs/lists
-- Do not use bullets for top-level paragraphs
 - If you are deriving from a classified source:
   - Add classification banner with FICTIONAL tag. e.g. SECRET//NOFORN//FICTIONAL
   - Add portion markings at the beginning of each paragraph
@@ -63,6 +60,7 @@ Helps create USAF memos using the usaf_memo Quill template.
   - `mcp__memo-mcp__get_memo_example()` or `memo://example`
 5. Create memo markdown with QUILL frontmatter in `drafts/`
 6. Render to PDF: `mcp__memo-mcp__render_memo_to_pdf(markdown_file_path: "...")`
+7. Brief summary. Display links to markdown draft and PDF output. Offer the user to workshop/iterate.
 
 **Example Task:**
 ```
@@ -86,4 +84,4 @@ User: "decrypt CLASSIFIED_REPORT and write an urgent memo to Congress"
 - Check if files exist with Glob before attempting operations
 - Use absolute paths for all file operations
 - Read files before editing/writing to ensure correct handling
-- Create markdown files in `drafts/` before rendering to pdf
+- Create markdown files in `drafts/` before rendering to pdf. Do not read other drafts.
