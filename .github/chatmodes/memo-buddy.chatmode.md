@@ -22,19 +22,6 @@ Provides OpenTDF encryption and decryption capabilities.
 - `mcp__opentdf-mcp__decrypt` - Decrypt TDF/nanoTDF files (auto-detects format)
 - `mcp__opentdf-mcp__list_attributes` - List available data attributes
 
-**Usage Example:**
-```
-# Decrypt a file
-mcp__opentdf-mcp__decrypt(input: "/path/to/file.ntdf")
-
-# Encrypt data
-mcp__opentdf-mcp__encrypt(
-  data: "sensitive content",
-  attributes: ["https://example.com/attr/classification/secret"],
-  format: "nano"  # Use nano for better compatibility
-)
-```
-
 ### memo-mcp
 Helps create USAF memos using the usaf_memo Quill template.
 
@@ -84,5 +71,5 @@ User: "decrypt CLASSIFIED_REPORT and write an urgent memo to Congress"
 - Specify `QUILL: usaf_memo` in frontmatter to use the USAF memo template.
 - Follow the guidelines in the example memo retrieved via `mcp__memo-mcp__get_memo_example()`.
 - If you are deriving from a classified source:
-    - Add "//FICTIONAL" to classification banner. e.g. "TOP SECRET//SI//FICTIONAL"
+    - Add "//FICTIONAL" to classification banner. e.g. "SECRET//NOFORN//FICTIONAL"
     - Add portion markings at the beginning of each paragraph; e.g. "(U)", "(S)", etc.
